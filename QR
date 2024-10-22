@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calificación del Servicio al Cliente</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 10px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            font-size: 1.2em;
+            color: #555;
+        }
+        input[type="range"] {
+            width: 100%;
+        }
+        .rating-label {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            font-size: 1.1em;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Califique nuestro Servicio al Cliente</h1>
+        <form action="procesar_calificacion.php" method="POST">
+            <div class="rating-section">
+                <label for="atencion">Atención recibida:</label>
+                <input type="range" id="atencion" name="atencion" min="1" max="10" step="1">
+                <div class="rating-label">
+                    <span>1</span><span>10</span>
+                </div>
+            </div>
+
+            <div class="rating-section">
+                <label for="servicio">Servicio:</label>
+                <input type="range" id="servicio" name="servicio" min="1" max="10" step="1">
+                <div class="rating-label">
+                    <span>1</span><span>10</span>
+                </div>
+            </div>
+
+            <div class="rating-section">
+                <label for="informacion">Información del servicio:</label>
+                <input type="range" id="informacion" name="informacion" min="1" max="10" step="1">
+                <div class="rating-label">
+                    <span>1</span><span>10</span>
+                </div>
+            </div>
+
+            <div class="rating-section">
+                <label for="eficiencia">Eficiencia:</label>
+                <input type="range" id="eficiencia" name="eficiencia" min="1" max="10" step="1">
+                <div class="rating-label">
+                    <span>1</span><span>10</span>
+                </div>
+            </div>
+
+            <button type="submit">Enviar Calificación</button>
+        </form>
+    </div>
+
+</body>
+</html>
